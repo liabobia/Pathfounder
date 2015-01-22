@@ -1,0 +1,22 @@
+class Cleric < PfClass
+
+  role :class
+  hit_die 8
+  alignment :any
+  #alignment is technically diety alignment within |1|x or |1|y
+
+  skills :appraise, :craft, :diplomacy, :heal, :knowledge_arcana, :knowledge_history, :knowledge_nobility, :knowledge_planes, :knowledge_religion, :linguistics, :profession, :sense_motive, :spellcraft
+  skill_ranks_per_level 2
+
+  base_attack_bonus      0
+  mods fortitude_save:  -2
+  mods will_save:        2
+  mods reflex_save:      0
+
+
+  adds weapon_proficiency: [:simple, :deity_weapon]
+  adds armor_proficiency: [:light, :medium]
+  adds shield_proficiency: [:light_wooden, :light_steel, :heavy_wooden, :heavy_steel, :buckler]
+  adds attack: [channel_energy] #adding a lib of attacks is how i'd do it but i'm no code
+  #oh god how do we add deity? it goes alignment>deity>domain*2>domain spells. i'll make a table
+end
