@@ -2,20 +2,16 @@ class Monk < PfClass
 
   role :class
   hit_die 8
-  alignment :neutral
+  alignment :lawful
 
-  skills :craft, :climb, :fly, :handle_animal, :heal, :knowledge_geography, :knowledge_nature, :perception, :profession, :ride, :spellcraft, :survival, :swim
+  skills :acrobatics, :craft, :climb, :escape_artist, :intimidate, :knowledge_history, :knowledge_religion, :perception, :perform, :profession, :ride, :sense_motive, :stealth, :swim
   skill_ranks_per_level 4
 
   base_attack_bonus      0
   mods fortitude_save:  -2
   mods will_save:        2
   mods reflex_save:      0
-  mods languages         sylvan
 
-  adds weapon_proficiency: [:dagger, :club, :dart, :quarterstaff, :scimitar, :scythe, :sickle, :shortspear, :sling, :spear]
-  adds armor_proficiency: [:padded, :leather, :hide]
-  adds shield_proficiency: [:light_wooden, :heavy_wooden]
-  adds crap: [:nature_bond, :nature_sense, :druid_orisons, :wild_empathy] #so far, the best syntax for extra powers that i could think of.
-  adds language: [:druidic]
+  adds weapon_proficiency: [:club, :light_crossbow, :heavy_crossbow, :dagger, :handaxe, :javelin, :kama, :nunchaku, :quarterstaff, :sai, :shortspear, :shortsword, :shuriken, :siangham, :sling, :spear]
+  adds crap: [:AC_bonus, :flurry_of_blows, :unarmed_strike, :stunning_fist] #so far, the best syntax for extra powers that i could think of.
 end
