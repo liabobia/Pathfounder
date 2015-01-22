@@ -9,7 +9,6 @@ class Barbarian < PfClass
   skill_ranks_per_level int modifier 
 
   base_attack_bonus      1
-  mods feat_count:       1 
   mods fortitude_save:  -2
   mods will_save:        0
   mods reflex_save:      0
