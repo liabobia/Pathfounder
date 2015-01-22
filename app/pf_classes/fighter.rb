@@ -4,8 +4,9 @@ class Fighter < PfClass
   hit_die 10
   alignment :any
 
-  skills :climb, :craft, :handle_animal
+  skills :climb, :craft, :handle_animal, :intimidate, :knowledge_dungeoneering, :knowledge_engineering, :profession, :ride, :survival, :swim
   skill_ranks_per_level 2
+  skill_ranks_per_level int modifier
 
   base_attack_bonus      1
   mods feat_count:       1
